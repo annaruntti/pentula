@@ -7,3 +7,22 @@
 .ButtonArea {
   padding-top: 1.5rem;
 }
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 960px;
+  }
+
+  .flex-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .FlexItem {
+    width: 50%;
+  }
+
+  .ButtonArea {
+    text-align: left;
+  }
+}

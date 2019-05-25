@@ -7,11 +7,19 @@ import "./LoginView.scss";
 function LoginView() {
   return (
     <div className="LoginView">
-      <AppIcon />
-      <div className="LoginArea">
-        <TextBox />
-        <div className="ButtonArea">
-          <LoginGmailButton />
+      <div className="container">
+        <div className="flex-wrapper">
+          <div className="FlexItem">
+            <AppIcon />
+          </div>
+          <div className="FlexItem">
+            <div className="LoginArea">
+              <TextBox />
+              <div className="ButtonArea">
+                <LoginGmailButton />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

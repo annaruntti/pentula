@@ -12,3 +12,23 @@
   border: none;
   background: #f96969;
 }
+
+.show-mobile {
+  display: block;
+}
+
+.show-desktop {
+  display: none;
+  text-align: left;
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .show-desktop {
+    display: block;
+  }
+
+  .show-mobile {
+    display: none;
+  }
+}
