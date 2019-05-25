@@ -1,0 +1,14 @@
+// .TextBox {
+//   padding: 1rem;
+// }
+
+.BrainhubCarousel__dots .BrainhubCarousel__dot:before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  padding: 0;
+  border: none;
+  background: #f96969;
+}
