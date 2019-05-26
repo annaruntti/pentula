@@ -3,6 +3,9 @@ import Header from "../Header/Header";
 import DogImage from "../../images/viivinaama.jpg";
 import { Link } from "react-router-dom";
 import "./OwnDogs.scss";
+import IconButton from "@material-ui/core/IconButton";
+import Typography from "@material-ui/core/Typography";
+import Icon from "@material-ui/core/Icon";
 
 function OwnDogs() {
   return (
@@ -11,12 +14,22 @@ function OwnDogs() {
         <div className="header">
           <Header />
         </div>
-        <Link to={"/frontpage"}>
+        <Link to={"/uusi-koira"}>
           <div className="text-box-red">
-            <h3>
-              Onko sinulla uusi koira, joita ei vielä löydy järjestelmästä?
-              Lisää koirasi tiedot.
-            </h3>
+            <div className="box-flex-wrapper">
+              <div className="flex-item-left">
+                <h3>
+                  Onko sinulla uusi koira, joita ei vielä löydy järjestelmästä?
+                  Lisää koirasi tiedot.
+                </h3>
+              </div>
+              <div className="flex-item-right">
+                <IconButton aria-label="Lisää">
+                  <Icon className="white-icon">add_circle</Icon>
+                  <Typography variant="srOnly">Lisää koira</Typography>
+                </IconButton>
+              </div>
+            </div>
           </div>
         </Link>
         <div className="text-box-white">

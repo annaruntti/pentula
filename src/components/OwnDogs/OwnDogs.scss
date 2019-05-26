@@ -1,3 +1,21 @@
+.box-flex-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box-flex-wrapper .flex-item-left {
+  width: 80%;
+}
+
+.box-flex-wrapper .flex-item-right {
+  width: 20%;
+  text-align: right;
+}
+
+.flex-item-right button {
+  margin-top: 55%;
+}
+
 .dog-list {
   list-style: none;
   padding-left: 0;
@@ -32,4 +50,8 @@
 .li-flex-wrapper .flex-item-right {
   width: 75%;
   padding-top: 0.5rem;
+}
+
+.white-icon {
+  color: #fff;
 }
