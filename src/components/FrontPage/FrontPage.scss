@@ -1,0 +1,39 @@
+.text-box-white {
+  background-color: #ffff;
+  padding: 0.5rem 1.5rem;
+  text-align: left;
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
+  margin-bottom: 0.5rem;
+}
+
+.text-box-red {
+  background-color: #f96969;
+  padding: 0.5rem 1.5rem;
+  text-align: left;
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
+  margin-bottom: 0.5rem;
+}
+
+a .text-box-white {
+  color: #000;
+}
+
+a .text-box-red {
+  color: #fff;
+}
+
+a .text-box-white:hover {
+  opacity: 0.8;
+}
+
+a .text-box-red:hover {
+  opacity: 0.8;
+}
+
+a .text-box-white:active {
+  opacity: 0.8;
+}
+
+a .text-box-red:active {
+  opacity: 0.8;
+}

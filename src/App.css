@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  background-color: #ffd4d4;
+  min-height: 100vh;
 }
 
 .App-logo {
@@ -28,6 +30,10 @@
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+}
+
+a {
+  text-decoration: none;
 }
 
 @keyframes App-logo-spin {

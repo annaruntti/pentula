@@ -10,4 +10,14 @@
   padding: 0.6rem 1.5rem 0.7rem 1.5rem;
   font-size: 20px;
   border: 0;
+  text-decoration: none;
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+.GmailButton:hover {
+  opacity: 0.6;
+}
+
+.GmailButton:active {
+  opacity: 0.6;
 }

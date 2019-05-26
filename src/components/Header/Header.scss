@@ -3,6 +3,15 @@
   flex-wrap: wrap;
 }
 
-header .FlexItem {
-  width: 50%;
+header .flex-item-left {
+  width: 40%;
+}
+
+header .flex-item-right {
+  width: 60%;
+}
+
+header {
+  padding-top: 1rem;
+  margin-bottom: 1rem;
 }

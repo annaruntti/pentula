@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./LoginGmailButton.scss";
 // import ReactDOM from "react-dom";
 // import GoogleLogin from "react-google-login";
@@ -42,7 +43,12 @@ class LoginGmailButton extends React.Component {
   render() {
     return (
       // <div id={GOOGLE_BUTTON_ID} />
-      <button className="GmailButton">Gmail-kirjautuminen</button>
+      //   <button to={"/frontpage"} className="GmailButton">
+      //     Gmail-kirjautuminen
+      //   </button>
+      <Link to={"/etusivu"} className="GmailButton">
+        Gmail-kirjautuminen
+      </Link>
     );
   }
 }
