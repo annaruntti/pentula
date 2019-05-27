@@ -1,5 +1,5 @@
 import React from "react";
-import NavIcon from "../AppIcon/AppIcon";
+import NavIcon from "../NavIcon/NavIcon";
 import NavMenu from "../NavMenu/NavMenu";
 import "./Header.scss";
 

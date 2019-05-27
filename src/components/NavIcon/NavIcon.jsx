@@ -7,7 +7,7 @@ function NavIcon() {
   return (
     <Link to={"/etusivu"}>
       <div className="ImageArea">
-        <img className="AppIcon" src={DogIcon} alt="" />
+        <img className="NavIcon" src={DogIcon} alt="" />
       </div>
     </Link>
   );

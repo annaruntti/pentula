@@ -1,8 +1,13 @@
 input {
   width: 95%;
-  padding: 0.5rem;
+  padding: 0.7rem;
   border-radius: 5px;
   margin: 0.5rem 0;
+  border: 0;
+  background-color: #fff3f3;
+  -webkit-box-shadow: inset 0px 1px 10px 0px rgba(248, 99, 99, 0.3);
+  -moz-box-shadow: inset 0px 1px 10px 0px rgba(248, 99, 99, 0.3);
+  box-shadow: inset 0px 1px 10px 0px rgba(248, 99, 99, 0.3);
 }
 
 .submit-btn {
