@@ -36,7 +36,7 @@ function NavMenu() {
           </Link>
         </li>
         <li className="list-item">
-          <Link to={"/etusivu"}>
+          <Link to={"/kasvattajalle"}>
             <div className="nav-flex-wrapper">
               <span className="nav-flex-item-left">Kasvattajalle</span>
               <span className="nav-flex-item-right">

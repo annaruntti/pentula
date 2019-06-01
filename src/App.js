@@ -5,6 +5,7 @@ import FrontPage from "./components/FrontPage/FrontPage";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import OwnDogs from "./components/OwnDogs/OwnDogs";
 import NewDog from "./components/NewDog/NewDog";
+import Breeder from "./components/Breeder/Breeder";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/etusivu" component={FrontPage} />
           <Route path="/omat-koirat" component={OwnDogs} />
           <Route path="/uusi-koira" component={NewDog} />
+          <Route path="/kasvattajalle" component={Breeder} />
         </Router>
       </div>
     </div>

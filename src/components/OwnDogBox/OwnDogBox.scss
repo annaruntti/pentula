@@ -1,0 +1,36 @@
+.dog-list {
+  list-style: none;
+  padding-left: 0;
+  text-align: left;
+}
+
+.dog-list li {
+  padding: 0.4rem 0 0.25rem 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.dog-list a {
+  color: #000;
+}
+
+.list-image {
+  object-fit: cover;
+  border-radius: 50%;
+  height: 45px;
+  width: 45px;
+  border: 2px solid;
+}
+
+.li-flex-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.li-flex-wrapper .flex-item-left {
+  width: 20%;
+}
+
+.li-flex-wrapper .flex-item-right {
+  width: 80%;
+  padding-top: 0.5rem;
+}
