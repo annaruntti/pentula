@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import OwnDogs from "./components/OwnDogs/OwnDogs";
 import NewDog from "./components/NewDog/NewDog";
 import Breeder from "./components/Breeder/Breeder";
+import NewLitter from "./components/NewLitter/NewLitter";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/omat-koirat" component={OwnDogs} />
           <Route path="/uusi-koira" component={NewDog} />
           <Route path="/kasvattajalle" component={Breeder} />
+          <Route path="/uusi-pentue" component={NewLitter} />
         </Router>
       </div>
     </div>

@@ -1,25 +1,25 @@
 input {
-  width: 95%;
-  padding: 0.7rem;
+  width: 90%;
+  padding: 0.9rem;
   border-radius: 5px;
   margin: 0.5rem 0;
   border: 0;
-  background-color: #fff3f3;
-  -webkit-box-shadow: inset 0px 1px 10px 0px rgba(248, 99, 99, 0.3);
-  -moz-box-shadow: inset 0px 1px 10px 0px rgba(248, 99, 99, 0.3);
-  box-shadow: inset 0px 1px 10px 0px rgba(248, 99, 99, 0.3);
+  background-color: #fff;
+  box-shadow: inset 0px 1px 8px 0px rgba(0, 0, 0, 0.2);
 }
 
 .submit-btn {
-  border-radius: 5px;
-  background-color: #f96969;
+  border-radius: 25px;
+  background-color: #1ea1b8;
   color: #fff;
-  padding: 0.5rem 1.4rem 0.6rem 1.4rem;
+  padding: 0.4rem 1.4rem 0.5rem 1.4rem;
   font-size: 18px;
+  width: 100%;
   border: 0;
   text-decoration: none;
   box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
+  margin-top: 0.5rem;
 }
 
 .btn-area {

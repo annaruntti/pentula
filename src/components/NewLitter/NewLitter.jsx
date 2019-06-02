@@ -2,20 +2,20 @@ import React from "react";
 import Header from "../Header/Header";
 import FormAddDog from "../FormAddDog/FormAddDog";
 // import { Link } from "react-router-dom";
-import "./NewDog.scss";
+import "./NewLitter.scss";
 
-function NewDog() {
+function NewLitter() {
   return (
     <div className="container">
       <div className="header">
         <Header />
       </div>
       <div className="text-box-white">
-        <h3>Lisää koirasi tiedot</h3>
+        <h3>Lisää pentueesi tiedot</h3>
         <FormAddDog />
       </div>
     </div>
   );
 }
 
-export default NewDog;
+export default NewLitter;

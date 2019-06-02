@@ -9,31 +9,29 @@ import Icon from "@material-ui/core/Icon";
 
 function OwnDogs() {
   return (
-    <div className="bg-primary">
-      <div className="container">
-        <div className="header">
-          <Header />
-        </div>
-        <Link to={"/uusi-koira"}>
-          <div className="text-box-red">
-            <div className="box-flex-wrapper">
-              <div className="flex-item-left">
-                <h3>
-                  Onko sinulla uusi koira, joita ei vielä löydy järjestelmästä?
-                  Lisää koirasi tiedot.
-                </h3>
-              </div>
-              <div className="flex-item-right">
-                <IconButton aria-label="Lisää">
-                  <Icon className="white-icon">add_circle</Icon>
-                  <Typography variant="srOnly">Lisää koira</Typography>
-                </IconButton>
-              </div>
+    <div className="container">
+      <div className="header">
+        <Header />
+      </div>
+      <Link to={"/uusi-koira"}>
+        <div className="text-box-blue">
+          <div className="box-flex-wrapper">
+            <div className="flex-item-left">
+              <h3>
+                Onko sinulla uusi koira, joita ei vielä löydy järjestelmästä?
+                Lisää koirasi tiedot.
+              </h3>
+            </div>
+            <div className="flex-item-right">
+              <IconButton aria-label="Lisää">
+                <Icon className="white-icon">add_circle</Icon>
+                <Typography variant="srOnly">Lisää koira</Typography>
+              </IconButton>
             </div>
           </div>
-        </Link>
-        <OwnDogBox />
-      </div>
+        </div>
+      </Link>
+      <OwnDogBox />
     </div>
   );
 }
