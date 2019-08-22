@@ -1,3 +1,34 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:600,700");
+@import url("https://fonts.googleapis.com/css?family=Signika:400,600&display=swap");
+
+/* Fonts */
+html {
+  font-family: "Roboto", sans-serif !important;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  color: #000 !important;
+  font-family: "Roboto", sans-serif !important;
+  font-weight: normal;
+  word-wrap: break-word;
+  font-kerning: normal;
+  -moz-font-feature-settings: "kern", "liga", "clig", "calt";
+  -ms-font-feature-settings: "kern", "liga", "clig", "calt";
+  -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
+  font-feature-settings: "kern", "liga", "clig", "calt";
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Signika", sans-serif;
+}
+
 .App {
   text-align: center;
   background-color: #ffd4d4;
@@ -5,14 +36,13 @@
   padding-bottom: 0.5rem;
 }
 
-.App-logo {
+/* .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
   pointer-events: none;
-}
+} */
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
