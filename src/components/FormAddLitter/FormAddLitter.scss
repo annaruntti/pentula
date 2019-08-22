@@ -7,3 +7,20 @@ textarea {
   background-color: #fff;
   box-shadow: inset 0px 1px 8px 0px rgba(0, 0, 0, 0.2);
 }
+
+.form-item-left {
+  width: 73%;
+  padding-top: 0.5rem;
+}
+
+.form-item-right {
+  width: 20%;
+}
+
+.form-item-right input {
+  width: 35%;
+}
+
+.text-span-label {
+  padding-top: 1.25rem;
+}

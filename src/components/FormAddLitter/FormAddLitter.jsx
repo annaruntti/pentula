@@ -120,8 +120,8 @@ class FormAddLitter extends React.Component {
           <label>
             Muistiinpanot synnytyksen kulusta
             <textarea
-              rows="4"
-              cols="50"
+              rows="5"
+              cols="60"
               id="lisatiedot"
               name="lisatiedot"
               type="text"
@@ -131,6 +131,16 @@ class FormAddLitter extends React.Component {
               // onChange={this.handleOfficialNameChange}
             />
           </label>
+          <div className="flex-wrapper">
+            <label className="form-item-left">
+              Pentujen
+              <br /> lukumäärä:
+            </label>
+            <div className="form-item-right">
+              <input type="text" id="pentu_lkm" />
+            </div>
+            <span className="text-span-label">kpl</span>
+          </div>
         </div>
         <div className="btn-area">
           {/* <button className="submit-btn" type="submit" value="Submit"> */}
