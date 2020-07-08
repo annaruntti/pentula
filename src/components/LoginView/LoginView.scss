@@ -10,6 +10,15 @@
   width: 100%;
 }
 
+.header-title {
+  border: 3px solid #000;
+  width: 55%;
+  padding: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #fff;
+}
+
 @media (min-width: 768px) {
   .flex-wrapper {
     display: flex;
@@ -22,5 +31,11 @@
 
   .ButtonArea {
     text-align: left;
+  }
+
+  .header-title {
+    margin-top: 30%;
+    margin-left: auto;
+    margin-right: 0;
   }
 }

@@ -13,12 +13,13 @@ function LoginView() {
             <AppIcon />
           </div>
           <div className="FlexItem">
-            <div className="LoginArea">
-              <TextBox />
-              <div className="ButtonArea">
-                <LoginGmailButton />
-              </div>
-            </div>
+            <h1 className="header-title">Pentula</h1>
+          </div>
+        </div>
+        <div className="LoginArea">
+          <TextBox />
+          <div className="ButtonArea">
+            <LoginGmailButton />
           </div>
         </div>
       </div>
