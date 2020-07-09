@@ -62,59 +62,39 @@ class FormAddLitter extends React.Component {
   }
 
   render() {
-    const omat_pentueet = this.state.omat_pentueet;
+    // const omat_pentueet = this.state.omat_pentueet;
     return (
       <form ref="postForm" onSubmit={this.onFormSubmit}>
         <div className="input-area">
-          <label>
-            Pentueen syntymäaika:
-            <input
-              id="syntymaaika"
-              name="syntymaaika"
-              type="text"
-              ref="syntymaaika"
-            />
-          </label>
-          <label>
-            Pentueen nimi:
-            <input
-              id="pentueen_nimi"
-              name="pentueen_nimi"
-              ref="pentueen_nimi"
-              type="text"
-              placeholder="Esim. A-pentue"
-            />
-          </label>
-          <label>
-            Emon virallinen nimi:
-            <input
-              id="emon_nimi"
-              name="emon_nimi"
-              type="text"
-              ref="emon_nimi"
-            />
-          </label>
-          <label>
-            Isän virallinen nimi:
-            <input
-              id="isan_nimi"
-              name="isan_nimi"
-              type="text"
-              ref="isan_nimi"
-            />
-          </label>
-          <label>
-            Muistiinpanot synnytyksen kulusta
-            <textarea
-              rows="5"
-              cols="60"
-              id="lisatiedot"
-              name="lisatiedot"
-              type="text"
-              ref="lisatiedot"
-              placeholder="Esim. synnytyksen alkamis- ja loppumiskellonaika yms."
-            />
-          </label>
+          <label>Pentueen syntymäaika:</label>
+          <input
+            id="syntymaaika"
+            name="syntymaaika"
+            type="text"
+            ref="syntymaaika"
+          />
+          <label>Pentueen nimi:</label>
+          <input
+            id="pentueen_nimi"
+            name="pentueen_nimi"
+            ref="pentueen_nimi"
+            type="text"
+            placeholder="Esim. A-pentue"
+          />
+          <label>Emon virallinen nimi:</label>
+          <input id="emon_nimi" name="emon_nimi" type="text" ref="emon_nimi" />
+          <label>Isän virallinen nimi:</label>
+          <input id="isan_nimi" name="isan_nimi" type="text" ref="isan_nimi" />
+          <label>Muistiinpanot synnytyksen kulusta</label>
+          <textarea
+            rows="5"
+            cols="60"
+            id="lisatiedot"
+            name="lisatiedot"
+            type="text"
+            ref="lisatiedot"
+            placeholder="Esim. synnytyksen alkamis- ja loppumiskellonaika yms."
+          />
           <div className="flex-wrapper">
             <label className="form-item-left">
               Pentujen

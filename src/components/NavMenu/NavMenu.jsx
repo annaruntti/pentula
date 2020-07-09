@@ -30,7 +30,7 @@ function NavMenu() {
         <li className="list-item">
           <Link to={"/kasvattajalle"}>
             <div className="nav-flex-wrapper">
-              <span className="nav-flex-item-left">Kasvattajalle</span>
+              <span className="nav-flex-item-left">Kasvattajille</span>
               <span className="nav-flex-item-right">
                 <Icon>arrow_forward_ios</Icon>
               </span>
