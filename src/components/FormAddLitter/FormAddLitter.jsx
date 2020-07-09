@@ -5,7 +5,7 @@ class FormAddLitter extends React.Component {
   constructor() {
     super();
     this.state = {
-      omat_pentueet: [],
+      own_litters: [],
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -16,7 +16,7 @@ class FormAddLitter extends React.Component {
     fetch("http://localhost:8000/api/omat-pentueet").then(function (response) {
       response.json().then(function (data) {
         that.setState({
-          omat_pentueet: data,
+          own_litters: data,
         });
       });
     });
@@ -26,12 +26,14 @@ class FormAddLitter extends React.Component {
     const that = this;
     event.preventDefault();
     const post_data = {
-      syntymaaika: this.refs.syntymaaika.value,
-      pentueen_nimi: this.refs.pentueen_nimi.value,
-      emon_nimi: this.refs.emon_nimi.value,
-      isan_nimi: this.refs.isan_nimi.value,
-      lisatiedot: this.refs.lisatiedot.value,
+      bdate: this.refs.bdate.value,
+      litter_name: this.refs.litter_name.value,
+      mom_name: this.refs.mom_name.value,
+      dad_name: this.refs.dad_name.value,
+      additional_info: this.refs.additional_info.value,
+      num_of_puppies: this.refs.num_of_puppies,
       litter_id: Math.floor(Math.random() * 1000) + 4,
+      user_id: Math.floor(Math.random() * 1000) + 4,
     };
     const request = new Request("http://localhost:8000/api/uusi-pentue", {
       method: "POST",
@@ -39,11 +41,11 @@ class FormAddLitter extends React.Component {
       body: JSON.stringify(post_data),
     });
 
-    const omat_pentueet = that.state.omat_pentueet;
-    omat_pentueet.push(post_data);
-    console.log(omat_pentueet);
+    const own_litters = that.state.own_litters;
+    own_litters.push(post_data);
+    console.log(own_litters);
     that.setState({
-      omat_pentueet: omat_pentueet,
+      own_litters: own_litters,
     });
 
     // xmlhttprequest()
@@ -57,27 +59,28 @@ class FormAddLitter extends React.Component {
   }
 
   handleSubmit(event) {
-    alert("Uusi pentue lisätty: " + this.state.pentueen_nimi);
+    alert("Uusi pentue lisätty: " + this.state.litter_name);
     event.preventDefault();
   }
 
   render() {
-    // const omat_pentueet = this.state.omat_pentueet;
+    // const own_litters = this.state.own_litters;
     return (
       <form ref="postForm" onSubmit={this.onFormSubmit}>
         <div className="input-area">
-          <label>Pentueen syntymäaika:</label>
+          <label>Pentueen syntymäpäivä:</label>
           <input
-            id="syntymaaika"
-            name="syntymaaika"
+            id="bdate"
+            name="bdate"
             type="text"
-            ref="syntymaaika"
+            ref="bdate"
+            placeholder="Esim. 05.07.2019"
           />
           <label>Pentueen nimi:</label>
           <input
-            id="pentueen_nimi"
-            name="pentueen_nimi"
-            ref="pentueen_nimi"
+            id="litter_name"
+            name="litter_name"
+            ref="litter_name"
             type="text"
             placeholder="Esim. A-pentue"
           />
@@ -89,10 +92,10 @@ class FormAddLitter extends React.Component {
           <textarea
             rows="5"
             cols="60"
-            id="lisatiedot"
-            name="lisatiedot"
+            id="additional_info"
+            name="additional_info"
             type="text"
-            ref="lisatiedot"
+            ref="additional_info"
             placeholder="Esim. synnytyksen alkamis- ja loppumiskellonaika yms."
           />
           <div className="flex-wrapper">
@@ -102,7 +105,12 @@ class FormAddLitter extends React.Component {
               lukumäärä:
             </label>
             <div className="form-item-right">
-              <input type="text" id="pentu_lkm" />
+              <input
+                type="text"
+                id="num_of_puppies"
+                name="num_of_puppies"
+                ref="num_of_puppies"
+              />
             </div>
             <span className="text-span-label">kpl</span>
           </div>

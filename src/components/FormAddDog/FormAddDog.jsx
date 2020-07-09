@@ -1,26 +1,22 @@
 import React from "react";
-// import { Link } from "react-router-dom";
 import "./FormAddDog.scss";
 
 class FormAddDog extends React.Component {
   constructor() {
     super();
     this.state = {
-      omat_koirat: [],
+      own_dogs: [],
     };
 
-    // this.handleNameChange = this.handleNameChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
-
-  // Make AJAX calls here
 
   componentDidMount() {
     var that = this;
     fetch("http://localhost:8000/api/omat-koirat").then(function (response) {
       response.json().then(function (data) {
         that.setState({
-          omat_koirat: data,
+          own_dogs: data,
         });
       });
     });
@@ -30,11 +26,11 @@ class FormAddDog extends React.Component {
     var that = this;
     event.preventDefault();
     let post_data = {
-      virallinen_nimi: this.refs.virallinen_nimi.value,
-      kutsumanimi: this.refs.kutsumanimi.value,
-      syntymaaika: this.refs.syntymaaika.value,
-      sukupuoli: this.refs.sukupuoli.value,
-      // accept: this.refs.accept.value,
+      official_name: this.refs.official_name.value,
+      name: this.refs.name.value,
+      bdate: this.refs.bdate.value,
+      sex: this.refs.sex.value,
+      dog_id: Math.floor(Math.random() * 1000) + 4,
       user_id: Math.floor(Math.random() * 1000) + 4,
     };
     var request = new Request("http://localhost:8000/api/uusi-koira", {
@@ -43,11 +39,11 @@ class FormAddDog extends React.Component {
       body: JSON.stringify(post_data),
     });
 
-    let omat_koirat = that.state.omat_koirat;
-    omat_koirat.push(post_data);
-    console.log(omat_koirat);
+    let own_dogs = that.state.own_dogs;
+    own_dogs.push(post_data);
+    console.log(own_dogs);
     that.setState({
-      omat_koirat: omat_koirat,
+      own_dogs: own_dogs,
     });
 
     // xmlhttprequest()
@@ -61,38 +57,34 @@ class FormAddDog extends React.Component {
   }
 
   handleSubmit(event) {
-    alert("Uusi koira lisätty: " + this.state.kutsumanimi);
+    alert("Uusi koira lisätty: " + this.state.name);
     event.preventDefault();
   }
 
   render() {
-    // let omat_koirat = this.state.omat_koirat;
+    // let own_dogs = this.state.own_dogs;
     return (
       <form ref="postForm" onSubmit={this.onFormSubmit}>
         <div className="input-area">
           <label>Koirasi kutsumanimi:</label>
-          <input
-            id="kutsumanimi"
-            name="kutsumanimi"
-            ref="kutsumanimi"
-            type="text"
-          />
+          <input id="name" name="name" ref="name" type="text" />
           <label>Koirasi virallinen nimi:</label>
           <input
-            id="virallinen_nimi"
-            name="virallinen_nimi"
+            id="official_name"
+            name="official_name"
             type="text"
-            ref="virallinen_nimi"
+            ref="official_name"
           />
-          <label>Koirasi syntymäaika:</label>
+          <label>Koirasi syntymäpäivä:</label>
           <input
-            id="syntymaaika"
-            name="syntymaaika"
+            id="bdate"
+            name="bdate"
             type="text"
-            ref="syntymaaika"
+            ref="bdate"
+            placeholder="Esim. 05.07.2019"
           />
           <label>Koirasi sukupuoli:</label>
-          <select id="sukupuoli" name="sukupuoli" ref="sukupuoli">
+          <select id="sex" name="sex" ref="sex">
             <option value="">Valitse sukupuoli</option>
             <option value="uros">Uros</option>
             <option value="narttu">Narttu</option>
