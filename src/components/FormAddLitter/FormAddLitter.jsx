@@ -112,11 +112,8 @@ class FormAddLitter extends React.Component {
             type="submit"
             value="Submit"
           >
-            Jatka pentujen tietoihin
-          </button>
-          {/* <Link className="submit-btn" to={"/pentujen-tiedot"}>
             Jatka pentujen lisäämiseen
-          </Link> */}
+          </button>
         </div>
       </form>
     );

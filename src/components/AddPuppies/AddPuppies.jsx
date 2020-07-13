@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../Header/Header";
-import FormAddLitter from "../FormAddLitter/FormAddLitter";
+import FormAddPuppy from "../FormAddPuppy/FormAddPuppy";
 import "./AddPuppies.scss";
 
 function AddPuppies() {
@@ -11,7 +11,7 @@ function AddPuppies() {
       </div>
       <div className="text-box-white">
         <h1 className="h3">Pentu nro 1.</h1>
-        <FormAddLitter />
+        <FormAddPuppy />
       </div>
     </div>
   );

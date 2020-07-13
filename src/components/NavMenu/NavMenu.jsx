@@ -8,16 +8,6 @@ function NavMenu() {
     <nav>
       <ul className="nav-link-list">
         <li className="list-item">
-          <Link to={"/etusivu"}>
-            <div className="nav-flex-wrapper">
-              <span className="nav-flex-item-left">Etusivu</span>
-              <span className="nav-flex-item-right">
-                <Icon>arrow_forward_ios</Icon>
-              </span>
-            </div>
-          </Link>
-        </li>
-        <li className="list-item">
           <Link to={"/omat-koirat"}>
             <div className="nav-flex-wrapper">
               <span className="nav-flex-item-left">Omat koirat</span>
