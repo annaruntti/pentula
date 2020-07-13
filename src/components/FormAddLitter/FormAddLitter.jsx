@@ -1,6 +1,6 @@
 import React from "react";
 import BDatePicker from "../BDatePicker/BDatePicker";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 import "./FormAddLitter.scss";
 
@@ -35,7 +35,6 @@ class FormAddLitter extends React.Component {
       mom_name: this.refs.mom_name.value,
       dad_name: this.refs.dad_name.value,
       additional_info: this.refs.additional_info.value,
-      num_of_puppies: this.refs.num_of_puppies,
       litter_id: Math.floor(Math.random() * 1000) + 4,
       user_id: Math.floor(Math.random() * 1000) + 4,
     };
@@ -65,6 +64,7 @@ class FormAddLitter extends React.Component {
   handleSubmit(event) {
     alert("Uusi pentue lisätty: " + this.state.litter_name);
     event.preventDefault();
+    this.props.history.push("/pentujen-tiedot");
   }
 
   render() {
@@ -73,13 +73,6 @@ class FormAddLitter extends React.Component {
       <form ref="postForm" onSubmit={this.onFormSubmit}>
         <div className="input-area">
           <label>Pentueen syntymäpäivä</label>
-          {/* <input
-            id="bdate"
-            name="bdate"
-            type="text"
-            ref="bdate"
-            placeholder="Esim. 05.07.2019"
-          /> */}
           <BDatePicker id="bdate" name="bdate" type="text" ref="bdate" />
           <label>Pentueen nimi</label>
           <input
@@ -98,9 +91,9 @@ class FormAddLitter extends React.Component {
             placeholder="Esim. suomenlapinkoira"
           />
           <label>Emon virallinen nimi</label>
-          <input id="emon_nimi" name="emon_nimi" type="text" ref="emon_nimi" />
+          <input id="mom_name" name="mom_name" type="text" ref="mom_name" />
           <label>Isän virallinen nimi</label>
-          <input id="isan_nimi" name="isan_nimi" type="text" ref="isan_nimi" />
+          <input id="dad_name" name="dad_name" type="text" ref="dad_name" />
           <label>Muistiinpanot synnytyksen kulusta</label>
           <textarea
             rows="5"
@@ -111,35 +104,19 @@ class FormAddLitter extends React.Component {
             ref="additional_info"
             placeholder="Esim. synnytyksen alkamis- ja loppumiskellonaika yms."
           />
-          <div className="flex-wrapper">
-            <label className="form-item-left">
-              Pentujen
-              <br />
-              lukumäärä:
-            </label>
-            <div className="form-item-right">
-              <input
-                type="text"
-                id="num_of_puppies"
-                name="num_of_puppies"
-                ref="num_of_puppies"
-              />
-            </div>
-            <span className="text-span-label">kpl</span>
-          </div>
         </div>
         <div className="btn-continue-area">
-          {/* <button
+          <button
             className="submit-btn"
             onClick={this.addLitter.bind(this)}
             type="submit"
             value="Submit"
           >
             Jatka pentujen tietoihin
-          </button> */}
-          <Link className="submit-btn" to={"/pentujen-tiedot"}>
-            Jatka pentujen tietoihin
-          </Link>
+          </button>
+          {/* <Link className="submit-btn" to={"/pentujen-tiedot"}>
+            Jatka pentujen lisäämiseen
+          </Link> */}
         </div>
       </form>
     );
