@@ -29,6 +29,8 @@ class FormAddDog extends React.Component {
       official_name: this.refs.official_name.value,
       name: this.refs.name.value,
       bdate: this.refs.bdate.value,
+      rnumber: this.refs.rnumber.value,
+      breed: this.refs.breed.value,
       sex: this.refs.sex.value,
       dog_id: Math.floor(Math.random() * 1000) + 4,
       user_id: Math.floor(Math.random() * 1000) + 4,
@@ -66,16 +68,16 @@ class FormAddDog extends React.Component {
     return (
       <form ref="postForm" onSubmit={this.onFormSubmit}>
         <div className="input-area">
-          <label>Koirasi kutsumanimi:</label>
+          <label>Koirasi kutsumanimi</label>
           <input id="name" name="name" ref="name" type="text" />
-          <label>Koirasi virallinen nimi:</label>
+          <label>Koirasi virallinen nimi</label>
           <input
             id="official_name"
             name="official_name"
             type="text"
             ref="official_name"
           />
-          <label>Koirasi syntymäpäivä:</label>
+          <label>Koirasi syntymäpäivä</label>
           <input
             id="bdate"
             name="bdate"
@@ -83,7 +85,23 @@ class FormAddDog extends React.Component {
             ref="bdate"
             placeholder="Esim. 05.07.2019"
           />
-          <label>Koirasi sukupuoli:</label>
+          <label>Koirasi rekisterinumero</label>
+          <input
+            id="rnumber"
+            name="rnumber"
+            type="text"
+            ref="rnumber"
+            placeholder="Esim. FI44616/14"
+          />
+          <label>Koirasi rotu</label>
+          <input
+            id="breed"
+            name="breed"
+            type="text"
+            ref="breed"
+            placeholder="Esim. suomenlapinkoira"
+          />
+          <label>Koirasi sukupuoli</label>
           <select id="sex" name="sex" ref="sex">
             <option value="">Valitse sukupuoli</option>
             <option value="uros">Uros</option>

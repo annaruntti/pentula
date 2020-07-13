@@ -28,6 +28,7 @@ class FormAddLitter extends React.Component {
     const post_data = {
       bdate: this.refs.bdate.value,
       litter_name: this.refs.litter_name.value,
+      breed: this.refs.breed.value,
       mom_name: this.refs.mom_name.value,
       dad_name: this.refs.dad_name.value,
       additional_info: this.refs.additional_info.value,
@@ -68,7 +69,7 @@ class FormAddLitter extends React.Component {
     return (
       <form ref="postForm" onSubmit={this.onFormSubmit}>
         <div className="input-area">
-          <label>Pentueen syntymäpäivä:</label>
+          <label>Pentueen syntymäpäivä</label>
           <input
             id="bdate"
             name="bdate"
@@ -76,7 +77,7 @@ class FormAddLitter extends React.Component {
             ref="bdate"
             placeholder="Esim. 05.07.2019"
           />
-          <label>Pentueen nimi:</label>
+          <label>Pentueen nimi</label>
           <input
             id="litter_name"
             name="litter_name"
@@ -84,9 +85,17 @@ class FormAddLitter extends React.Component {
             type="text"
             placeholder="Esim. A-pentue"
           />
-          <label>Emon virallinen nimi:</label>
+          <label>Pentueen rotu</label>
+          <input
+            id="breed"
+            name="breed"
+            ref="breed"
+            type="text"
+            placeholder="Esim. suomenlapinkoira"
+          />
+          <label>Emon virallinen nimi</label>
           <input id="emon_nimi" name="emon_nimi" type="text" ref="emon_nimi" />
-          <label>Isän virallinen nimi:</label>
+          <label>Isän virallinen nimi</label>
           <input id="isan_nimi" name="isan_nimi" type="text" ref="isan_nimi" />
           <label>Muistiinpanot synnytyksen kulusta</label>
           <textarea
