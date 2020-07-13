@@ -7,8 +7,7 @@ class OwnDogBox extends React.Component {
   constructor() {
     super();
     this.state = {
-      // nimi: "",
-      omat_koirat: []
+      own_dogs: [],
     };
   }
 
@@ -16,21 +15,21 @@ class OwnDogBox extends React.Component {
 
   componentDidMount() {
     var that = this;
-    fetch("http://localhost:8000/api/omat-koirat").then(function(response) {
-      response.json().then(function(data) {
+    fetch("http://localhost:8000/api/omat-koirat").then(function (response) {
+      response.json().then(function (data) {
         that.setState({
-          omat_koirat: data
+          own_dogs: data,
         });
       });
     });
   }
   render() {
-    let omat_koirat = this.state.omat_koirat;
+    let own_dogs = this.state.own_dogs;
     return (
       <div className="text-box-white">
         <h3>Omat koirasi:</h3>
         <ul className="dog-list">
-          {omat_koirat.map(uusi_koira => (
+          {own_dogs.map((new_dog) => (
             <li>
               <Link to={"/etusivu"}>
                 <div className="li-flex-wrapper">
@@ -39,10 +38,10 @@ class OwnDogBox extends React.Component {
                   </div>
                   <div className="flex-item-right">
                     <span>
-                      <b>"{uusi_koira.kutsumanimi}"</b>
+                      <b>"{new_dog.name}"</b>
                     </span>
                     <br />
-                    <span>{uusi_koira.virallinen_nimi}</span>
+                    <span>{new_dog.official_name}</span>
                   </div>
                 </div>
               </Link>

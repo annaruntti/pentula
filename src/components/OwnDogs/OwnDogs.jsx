@@ -1,11 +1,12 @@
 import React from "react";
-import Header from "../Header/Header";
-import OwnDogBox from "../OwnDogBox/OwnDogBox";
 import { Link } from "react-router-dom";
-import "./OwnDogs.scss";
 import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
 import Icon from "@material-ui/core/Icon";
+
+import Header from "../Header/Header";
+import OwnDogBox from "../OwnDogBox/OwnDogBox";
+import "./OwnDogs.scss";
 
 function OwnDogs() {
   return (
