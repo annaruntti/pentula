@@ -72,50 +72,55 @@ class FormAddPuppy extends React.Component {
     // const puppies = this.state.puppies;
     return (
       <form ref="postForm" onSubmit={this.onFormSubmit}>
-        <div className="input-area">
-          <label>Syntymäaika</label>
-          <BDatePicker id="btime" name="btime" type="text" ref="btime" />
-          <label>Pennun nimi</label>
-          <input
-            id="name"
-            name="name"
-            ref="name"
-            type="text"
-            placeholder="Pennun ns. työnimi"
-          />
-          <label>Pennun syntymäpaino</label>
-          <input
-            id="bweight"
-            name="bweight"
-            ref="bweight"
-            type="text"
-            placeholder="Paino grammoina"
-          />
-          <label>Pennun tuntomerkit</label>
-          <textarea
-            rows="5"
-            cols="60"
-            id="description"
-            name="description"
-            type="text"
-            ref="description"
-            placeholder="Esim. väri, merkit yms."
-          />
-          <label>Pennun sukupuoli</label>
-          <select id="sex" name="sex" ref="sex">
-            <option value="">Valitse sukupuoli</option>
-            <option value="uros">Uros</option>
-            <option value="narttu">Narttu</option>
-          </select>
+        <div className="text-box-white">
+          <h1 className="h3">Pentu nro 1.</h1>
+          <div className="input-area">
+            <label>Syntymäaika</label>
+            <BDatePicker id="btime" name="btime" type="text" ref="btime" />
+            <label>Pennun nimi</label>
+            <input
+              id="name"
+              name="name"
+              ref="name"
+              type="text"
+              placeholder="Pennun ns. työnimi"
+            />
+            <label>Pennun syntymäpaino</label>
+            <input
+              id="bweight"
+              name="bweight"
+              ref="bweight"
+              type="text"
+              placeholder="Paino grammoina"
+            />
+            <label>Pennun tuntomerkit</label>
+            <textarea
+              rows="5"
+              cols="60"
+              id="description"
+              name="description"
+              type="text"
+              ref="description"
+              placeholder="Esim. väri, merkit yms."
+            />
+            <label>Pennun sukupuoli</label>
+            <select id="sex" name="sex" ref="sex">
+              <option value="">Valitse sukupuoli</option>
+              <option value="uros">Uros</option>
+              <option value="narttu">Narttu</option>
+            </select>
+          </div>
         </div>
         <div className="btn-continue-area">
+          <button className="secondary-btn">Lisää seuraava pentu</button>
+          <h2 className="h3">TAI</h2>
           <button
             className="submit-btn"
             onClick={this.addLitter.bind(this)}
             type="submit"
             value="Submit"
           >
-            Tallenna
+            Tallenna pennut
           </button>
         </div>
       </form>

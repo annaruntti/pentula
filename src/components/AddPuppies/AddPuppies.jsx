@@ -9,10 +9,7 @@ function AddPuppies() {
       <div className="header">
         <Header />
       </div>
-      <div className="text-box-white">
-        <h1 className="h3">Pentu nro 1.</h1>
-        <FormAddPuppy />
-      </div>
+      <FormAddPuppy />
     </div>
   );
 }
