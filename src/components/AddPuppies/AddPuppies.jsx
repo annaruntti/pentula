@@ -1,21 +1,20 @@
 import React from "react";
 import Header from "../Header/Header";
 import FormAddLitter from "../FormAddLitter/FormAddLitter";
-// import { Link } from "react-router-dom";
-import "./NewLitter.scss";
+import "./AddPuppies.scss";
 
-function NewLitter() {
+function AddPuppies() {
   return (
     <div className="container">
       <div className="header">
         <Header />
       </div>
       <div className="text-box-white">
-        <h1 className="h3">Lisää pentueesi tiedot</h1>
+        <h1 className="h3">Pentu nro 1.</h1>
         <FormAddLitter />
       </div>
     </div>
   );
 }
 
-export default NewLitter;
+export default AddPuppies;

@@ -18,10 +18,10 @@ function OwnDogs() {
         <div className="text-box-blue">
           <div className="box-flex-wrapper">
             <div className="flex-item-left">
-              <h3>
+              <h1 className="h3">
                 Onko sinulla uusi koira, joita ei vielä löydy järjestelmästä?
                 Lisää koirasi tiedot.
-              </h3>
+              </h1>
             </div>
             <div className="flex-item-right">
               <IconButton aria-label="Lisää">

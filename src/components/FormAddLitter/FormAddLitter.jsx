@@ -1,5 +1,6 @@
 import React from "react";
 import "./FormAddLitter.scss";
+import { Link } from "react-router-dom";
 
 class FormAddLitter extends React.Component {
   constructor() {
@@ -124,15 +125,18 @@ class FormAddLitter extends React.Component {
             <span className="text-span-label">kpl</span>
           </div>
         </div>
-        <div className="btn-area">
-          <button
+        <div className="btn-continue-area">
+          {/* <button
             className="submit-btn"
             onClick={this.addLitter.bind(this)}
             type="submit"
             value="Submit"
           >
-            Lähetä
-          </button>
+            Jatka pentujen tietoihin
+          </button> */}
+          <Link className="submit-btn" to={"/pentujen-tiedot"}>
+            Jatka pentujen tietoihin
+          </Link>
         </div>
       </form>
     );
