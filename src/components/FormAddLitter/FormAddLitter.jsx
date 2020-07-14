@@ -1,5 +1,5 @@
 import React from "react";
-import BDatePicker from "../BDatePicker/BDatePicker";
+// import BDatePicker from "../BDatePicker/BDatePicker";
 // import { Link } from "react-router-dom";
 
 import "./FormAddLitter.scss";
@@ -73,7 +73,8 @@ class FormAddLitter extends React.Component {
       <form ref="postForm" onSubmit={this.onFormSubmit}>
         <div className="input-area">
           <label>Pentueen syntymäpäivä</label>
-          <BDatePicker id="bdate" name="bdate" type="text" ref="bdate" />
+          {/* <BDatePicker id="bdate" name="bdate" type="text" ref="bdate" /> */}
+          <input id="bdate" name="bdate" type="date" ref="bdate" />
           <label>Pentueen nimi</label>
           <input
             id="litter_name"

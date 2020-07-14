@@ -25,6 +25,7 @@ class OwnDogBox extends React.Component {
   }
   render() {
     let own_dogs = this.state.own_dogs;
+    console.log(own_dogs);
     return (
       <div className="text-box-white">
         <h3>Omat koirasi:</h3>

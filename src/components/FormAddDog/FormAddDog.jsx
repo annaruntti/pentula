@@ -1,4 +1,6 @@
 import React from "react";
+// import BDatePicker from "../BDatePicker/BDatePicker";
+
 import "./FormAddDog.scss";
 
 class FormAddDog extends React.Component {
@@ -34,6 +36,7 @@ class FormAddDog extends React.Component {
       sex: this.refs.sex.value,
       dog_id: Math.floor(Math.random() * 1000) + 4,
       user_id: Math.floor(Math.random() * 1000) + 4,
+      active: true,
     };
     var request = new Request("http://localhost:8000/api/uusi-koira", {
       method: "POST",
@@ -78,13 +81,7 @@ class FormAddDog extends React.Component {
             ref="official_name"
           />
           <label>Koirasi syntymäpäivä</label>
-          <input
-            id="bdate"
-            name="bdate"
-            type="text"
-            ref="bdate"
-            placeholder="Esim. 05.07.2019"
-          />
+          <input id="bdate" name="bdate" type="date" ref="bdate" />
           <label>Koirasi rekisterinumero</label>
           <input
             id="rnumber"
