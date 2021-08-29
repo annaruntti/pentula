@@ -2,6 +2,10 @@
 //   padding: 1rem;
 // }
 
+.BrainhubCarousel__dots button {
+  background-color: transparent;
+}
+
 .BrainhubCarousel__dots .BrainhubCarousel__dot:before {
   content: "";
   display: block;
